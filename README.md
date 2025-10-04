@@ -1,10 +1,23 @@
-# PyMailHero
+# 📧 Auto-email-online
 
-Automação de envio de emails com interface web usando Streamlit.
+**PyMailHero** é uma aplicação web feita com Streamlit e Yagmail para automatizar o envio de e-mails de forma simples e segura.
 
-## 🚀 Como usar localmente
+## 🚀 Funcionalidades
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/PyMailHero.git
-   cd PyMailHero
+- Interface intuitiva para envio de e-mails
+- Autenticação segura com `st.secrets`
+- Feedback visual de sucesso ou erro
+- Pronto para publicação no Streamlit Cloud
+
+## 🛠️ Tecnologias
+
+- Python
+- Streamlit
+- Yagmail
+- SMTP (Gmail)
+
+## 📦 Instalação
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
