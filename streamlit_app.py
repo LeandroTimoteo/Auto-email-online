@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import yagmail
 from resposta_ia import gerar_resposta
@@ -9,7 +7,7 @@ st.set_page_config(page_title="PyMailHero", page_icon="📧")
 st.title("📧 PyMailHero - Automação de Emails")
 st.markdown("Escolha abaixo se deseja enviar um e-mail ou gerar uma resposta automática com IA.")
 
-# Abas de navegação
+# Navegação lateral
 aba = st.sidebar.radio("📌 Função", ["Enviar Email", "Gerar Resposta Automática"])
 
 # Aba 1: Enviar Email Manualmente
@@ -46,12 +44,13 @@ elif aba == "Gerar Resposta Automática":
     if st.button("Gerar Resposta com IA"):
         if email_recebido:
             with st.spinner("Gerando resposta com IA..."):
-                try:
-                    st.session_state.resposta_gerada = gerar_resposta(email_recebido)
+                resposta = gerar_resposta(email_recebido)
+                if resposta.startswith("❌"):
+                    st.error(resposta)
+                else:
+                    st.session_state.resposta_gerada = resposta
                     st.success("✅ Resposta gerada:")
-                    st.write(st.session_state.resposta_gerada)
-                except Exception as e:
-                    st.error(f"❌ Erro ao gerar resposta: {e}")
+                    st.write(resposta)
         else:
             st.warning("⚠️ Cole o conteúdo do e-mail para gerar uma resposta.")
 
