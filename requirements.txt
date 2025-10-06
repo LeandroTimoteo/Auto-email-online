@@ -1,4 +1,5 @@
 streamlit
 yagmail
-openai
+openai==1.3.5
+requests
 

@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import yagmail
 from resposta_ia import gerar_resposta
@@ -53,16 +55,16 @@ elif aba == "Gerar Resposta Automática":
         else:
             st.warning("⚠️ Cole o conteúdo do e-mail para gerar uma resposta.")
 
-    if st.session_state.resposta_gerada and st.button("📤 Enviar Resposta por Email"):
-        if destinatario_ia and assunto_ia:
-            try:
-                with st.spinner("Enviando resposta..."):
-                    yag = yagmail.SMTP(user=st.secrets["email"], password=st.secrets["senha"])
-                    yag.send(to=destinatario_ia, subject=assunto_ia, contents=st.session_state.resposta_gerada)
-                st.success("✅ Resposta enviada com sucesso!")
-            except Exception as e:
-                st.error(f"❌ Erro ao enviar resposta: {e}")
-        else:
-            st.warning("⚠️ Preencha o destinatário e o assunto para enviar a resposta.")
-
+    if st.session_state.resposta_gerada:
+        if st.button("📤 Enviar Resposta por Email"):
+            if destinatario_ia and assunto_ia:
+                try:
+                    with st.spinner("Enviando resposta..."):
+                        yag = yagmail.SMTP(user=st.secrets["email"], password=st.secrets["senha"])
+                        yag.send(to=destinatario_ia, subject=assunto_ia, contents=st.session_state.resposta_gerada)
+                    st.success("✅ Resposta enviada com sucesso!")
+                except Exception as e:
+                    st.error(f"❌ Erro ao enviar resposta: {e}")
+            else:
+                st.warning("⚠️ Preencha o destinatário e o assunto para enviar a resposta.")
 

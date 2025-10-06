@@ -13,7 +13,7 @@ def gerar_resposta(email_texto):
                 "HTTP-Referer": "https://auto-email-online-jpgtf5i5w9crt2rlgemdaa.streamlit.app",
                 "X-Title": "PyMailHero",
             },
-            model="openai/gpt-4o",  # ou "mistralai/mistral-7b" se quiser gratuito
+            model="mistralai/mistral-7b-instruct",  # ✅ modelo gratuito e válido
             messages=[
                 {
                     "role": "user",
