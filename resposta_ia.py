@@ -1,20 +1,19 @@
 from openai import OpenAI
+import streamlit as st
 
-# Inicializa o cliente OpenRouter via SDK compatível com OpenAI
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",
+    api_key=st.secrets["openrouter_api_key"],
 )
 
-# Função que gera resposta automática com IA
 def gerar_resposta(email_texto):
     try:
         completion = client.chat.completions.create(
             extra_headers={
-                "HTTP-Referer": "https://pymailhero.streamlit.app",  # opcional para ranking
-                "X-Title": "PyMailHero",  # opcional para ranking
+                "HTTP-Referer": "https://auto-email-online-jpgtf5i5w9crt2rlgemdaa.streamlit.app",
+                "X-Title": "PyMailHero",
             },
-            model="mistralai/mistral-7b-instruct:free",  # ✅ modelo gratuito
+            model="openai/gpt-4o",  # ou "mistralai/mistral-7b" se quiser gratuito
             messages=[
                 {
                     "role": "user",
