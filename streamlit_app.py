@@ -38,30 +38,31 @@ elif aba == "Gerar Resposta Automática":
     destinatario_ia = st.text_input("✉️ Destinatário para resposta automática")
     assunto_ia = st.text_input("📝 Assunto da resposta")
 
-    resposta = ""
+    if "resposta_gerada" not in st.session_state:
+        st.session_state.resposta_gerada = ""
 
     if st.button("Gerar Resposta com IA"):
         if email_recebido:
             with st.spinner("Gerando resposta com IA..."):
                 try:
-                    resposta = gerar_resposta(email_recebido)
+                    st.session_state.resposta_gerada = gerar_resposta(email_recebido)
                     st.success("✅ Resposta gerada:")
-                    st.write(resposta)
+                    st.write(st.session_state.resposta_gerada)
                 except Exception as e:
                     st.error(f"❌ Erro ao gerar resposta: {e}")
         else:
             st.warning("⚠️ Cole o conteúdo do e-mail para gerar uma resposta.")
 
-    # Botão para enviar a resposta gerada
-    if resposta and st.button("📤 Enviar Resposta por Email"):
+    if st.session_state.resposta_gerada and st.button("📤 Enviar Resposta por Email"):
         if destinatario_ia and assunto_ia:
             try:
                 with st.spinner("Enviando resposta..."):
                     yag = yagmail.SMTP(user=st.secrets["email"], password=st.secrets["senha"])
-                    yag.send(to=destinatario_ia, subject=assunto_ia, contents=resposta)
+                    yag.send(to=destinatario_ia, subject=assunto_ia, contents=st.session_state.resposta_gerada)
                 st.success("✅ Resposta enviada com sucesso!")
             except Exception as e:
                 st.error(f"❌ Erro ao enviar resposta: {e}")
         else:
             st.warning("⚠️ Preencha o destinatário e o assunto para enviar a resposta.")
+
 
