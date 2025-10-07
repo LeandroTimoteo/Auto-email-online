@@ -62,11 +62,13 @@ Revise e envie com um clique
 
 ✅ Gmail com autenticação de dois fatores
 
-📬 Contato
-Desenvolvido por Analista de Sistemas: Leandro Timóteo Silva
+## 📬 Contato
 
-📧 E-mail: leandrinhots6@gmail.com
+**Desenvolvido por Analista de Sistemas: Leandro Timóteo Silva**
 
-💼 LinkedIn: linkedin.com/in/leandro-timóteo-ads
+- 📧 **E-mail:** [leandrinhots6@gmail.com](mailto:leandrinhots6@gmail.com)  
+- 💼 **LinkedIn:** [linkedin.com/in/leandro-timóteo-ads](https://www.linkedin.com/in/leandro-timóteo-ads)  
+- 📱 **WhatsApp:** [Clique para enviar mensagem](https://wa.me/5583987830223)
 
-📱 WhatsApp: Enviar mensagem
+
+
