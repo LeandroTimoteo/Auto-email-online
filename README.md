@@ -54,14 +54,15 @@ Revise e envie com um clique
 - 💼 **LinkedIn:** [linkedin.com/in/leandro-timóteo-ads](https://www.linkedin.com/in/leandro-timóteo-ads)  
 - 📱 **WhatsApp:** [Clique para enviar mensagem](https://wa.me/5583987830223)
 
-### 🧠 Tela de Automação de Resposta com IA  
-![Automação de Resposta](assets/Captura%20de%20tela%202025-10-06%20185243.png)
-
 ### 🤖 Tela de Geração de Resposta com IA 
 ![Resposta com IA](assets/Captura%20de%20tela%202025-10-06%20185459.png)
 
 ### 🤖 Tela de Geração de Resposta com IA  
 ![Resposta com IA](assets/Captura%20de%20tela%202025-10-06%20185459.png)
+
+### 🧠 Tela de Automação Inteligente  
+![Automação Inteligente](assets/Captura%20de%20tela%202025-10-06%20185243.png)
+
 
 
 
