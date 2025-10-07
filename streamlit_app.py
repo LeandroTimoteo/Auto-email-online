@@ -66,4 +66,18 @@ elif aba == "Gerar Resposta Automática":
                     st.error(f"❌ Erro ao enviar resposta: {e}")
             else:
                 st.warning("⚠️ Preencha o destinatário e o assunto para enviar a resposta.")
+                
+import streamlit as st
+
+video_path = "videos/demo-pymailhero.mp4"
+
+with open(video_path, "rb") as video_file:
+    video_bytes = video_file.read()
+
+st.video(video_bytes)
+
+
+                
+    
+
 
