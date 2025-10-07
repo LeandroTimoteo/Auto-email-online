@@ -60,8 +60,12 @@ Revise e envie com um clique
 ### 🤖 Tela de Geração de Resposta com IA  
 ![Resposta com IA](assets/Captura%20de%20tela%202025-10-06%20185459.png)
 
-### 🧠 Tela de Automação Inteligente  
-![Automação Inteligente](assets/Captura%20de%20tela%202025-10-06%20185243.png)
+### 📥 vídeo de demonstração
+
+[🔗 Clique aqui ver o vídeo](videos/demo-pymailhero.mp4)
+
+
+
 
 
 
