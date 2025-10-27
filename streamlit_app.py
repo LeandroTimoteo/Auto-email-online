@@ -66,6 +66,7 @@ elif aba == "Gerar Resposta Automática":
                     st.error(f"❌ Erro ao enviar resposta: {e}")
             else:
                 st.warning("⚠️ Preencha o destinatário e o assunto para enviar a resposta.")
+
                 
 
 

@@ -1,9 +1,9 @@
 from openai import OpenAI
 
-# Inicializa o cliente com a chave e URL da OpenRouter
+# Inicializa o cliente com a nova chave e URL da OpenRouter
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",
+    api_key="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",
 )
 
 # Faz a requisição de completions com IA
@@ -24,3 +24,4 @@ completion = client.chat.completions.create(
 # Exibe a resposta gerada pela IA
 print("✅ Resposta da IA:")
 print(completion.choices[0].message.content)
+
